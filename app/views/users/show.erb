@@ -1,14 +1,15 @@
 <body>
   <header>
-    <h1>APP NAME</h1>
+    <h1><%= @user.user_name.capitalize %> Stats Page</h1>
     <nav>
+      <h3>Click <a href='/deck'>here</a> to go to the List of Decks.</h3>
       <!-- Nav links organized as an unordered list -->
     </nav>
   </header>
 
   <main>
     <section>
-      <%=@user.user_name%>'s User Name
+      <%= @user.user_name.capitalize %>'s User Name
       <!-- First section content - Full-page width -->
     </section>
     <section>

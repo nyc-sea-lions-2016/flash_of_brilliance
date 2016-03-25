@@ -14,7 +14,7 @@ post '/login' do
 end
 
 get '/users/new' do
-  erb :new
+  erb :'/users/new'
 end
 
 post '/users' do
