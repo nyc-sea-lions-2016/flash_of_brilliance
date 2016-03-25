@@ -1,6 +1,6 @@
 class CreateGames < ActiveRecord::Migration
   def change
-    create_table :games do |to|
+    create_table :games do |t|
       t.references :user, index: true
       t.references :deck, index: true
       t.integer :num_correct, default: 0
