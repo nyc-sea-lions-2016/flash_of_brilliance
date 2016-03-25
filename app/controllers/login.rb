@@ -5,10 +5,10 @@ end
 post '/login' do
   user = User.find_by(user_name:params[:user][:user_name])
   if user && user.authenticate(params[:user][:password])
-    session[:user_id] = user.user_name
-    redirect "/deck/#{user.id}"
+    session[:user_id] = user.id
+    redirect "/users/#{user.id}"
   else
-    @log_in_errors = ["Wrong email or password"]
+    @errors = ["Wrong email or password"]
     erb :login
   end
 end
@@ -18,6 +18,14 @@ get '/users/new' do
 end
 
 post '/users' do
-
-
+  user = User.new(params[:user])
+  if user.save
+    session[:user_id] = user.id
+    redirect "/users/#{user.id}"
+  else
+    @errors = ["Email is already taken"]
+    erb :'users/new'
+  end
 end
+
+
