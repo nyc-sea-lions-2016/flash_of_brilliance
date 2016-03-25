@@ -6,7 +6,9 @@
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
   -->
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:700|Open+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/drop-in.css">
   <!--
     application.css is where you put your styles
   -->
@@ -17,7 +19,15 @@
 
   <title></title>
 </head>
-<body>
-  <%= yield %>
-</body>
+  <body>
+    <header>
+      <h1>Flashcards!!!!!!</h1>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      Copyright 2016 Sea Lions Arf Arf
+    </footer>
+  </body>
 </html>

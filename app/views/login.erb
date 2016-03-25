@@ -1,25 +1,10 @@
-<div class="container">
-  <h1>Welcome to Flashcards!</h1>
-  <h3>Log-In Here:</h3>
-    <main class="form-wrapper" role="main">
-
-    <% if @log_in_errors %>
-      <div class="errors-wrapper">
-        <span>Your entry could not be saved:</span>
-        <ul class="errors">
-          <% @log_in_errors.each do |error| %>
-            <li class="error"><%= error %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <form method="post" action="/login">
+    <h1>Welcome to Flashcards!</h1>
+    <h3>Login here</h3>
+      <form method="post" action="/login">
       <div>
         <label for="user_name"></label>
         <input id="user_name_input" placeholder="user_name" name="user[user_name]" type="text" value="<%= @user.try(:user_name) %>">
       </div>
-
       <div>
         <label for="password"></label>
         <input id="password_input" placeholder="password" name="user[password]" type="password" value="<%= @user.try(:password) %>">
@@ -27,5 +12,4 @@
 
       <input type="submit" value="Sign-In" class="button">
     </form>
-  </main>
-</div>
+      
