@@ -1,0 +1,252 @@
+/*! drop-in.css | MIT License | github.com/webdevjeffus/drop-in-css */
+
+/* GOOGLE FONT LINK **********************************************************\
+To serve the default fonts for drop-in.css,
+paste this link into the <head> of your HTML document:
+<link href='https://fonts.googleapis.com/css?family=Alegreya:700|Open+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+If you are using a drop-in.css theme other than default, use the link in the comment
+of the drop-in-XX.css theme file instead of the link above.
+\*****************************************************************************/
+
+
+/* UTILITY STYLES ************************************************************/
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 600px;
+  max-width: 800px;
+}
+
+h1, h2, h3, h4, h5, h6, p { margin: 0 0 0.5rem; }
+
+p:last-child { margin-bottom: 0rem; }
+
+header:after,
+main:after,
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* DESIGN STYLES *************************************************************/
+
+/* Fonts */
+
+html { font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4 {
+  font-family: 'Alegreya', serif;
+}
+
+/* Colors */
+
+html {
+  background-color: #888;   /* medium background color, eg: 50% gray */
+  color: #ddd;              /* light font color, eg: 15% gray */
+}
+
+body,
+header nav input[type="submit"] {
+  background-color: #222;    /* dark background color, eg: 85% gray */
+}
+
+main {
+  background-color: #ddd;   /* light backround color, eg: 15% gray */
+  color: #222;              /* dark font color, eg: 85% gray */
+}
+
+a:link,
+a:visited,
+header nav input[type="submit"] {
+  color: #c00;           /* darker contrasting color; inactive links */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+header nav input[type="submit"]:hover,
+header nav input[type="submit"]:active {
+  color: #f22;          /* brighter contrasting color; active links */
+}
+
+header nav li {
+  border-left: 3px solid #888;    /* this should match html background-color */
+}
+
+
+main table,
+main th,
+main td {
+  border: 1px solid #222;     /* this should match main font color */
+  background-color: #eee;     /* this should be lighter than main background-color */
+}
+
+main section { border-bottom: 2px solid #888; }
+  /* this should match html background-color */
+
+main aside { background-color: #bbb; }
+  /* this should be slightly darker than main background-color, eg: 25% gray */
+
+
+/* HEADER STYLES *************************************************************/
+
+header { padding: 1rem; }
+
+header>h1,
+header div { float: left; }
+
+header h1 {
+  line-height: 1;
+  font-size: 3rem;
+}
+
+header p {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+header nav { float: right; }
+
+header nav ul { list-style: none; }
+
+header nav li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+header nav li:nth-last-of-type(1) { padding-right: 0;}
+
+header nav li:nth-of-type(1) { border-left: 0;}
+
+header nav input[type="submit"] {
+  overflow: visible;
+  text-align: center;
+  width: auto;
+  border: none;
+}
+
+
+/* MAIN STYLES ***************************************************************/
+
+main {
+  padding: 1rem;
+}
+
+main section {
+  padding: 1rem 0;
+}
+
+main section:nth-of-type(1) {
+  padding-top: 0;
+}
+
+main section:nth-last-of-type(1) {
+  padding-bottom: 0;
+  border: none;
+}
+
+main article {
+  width: 65%;
+  float: left;
+}
+
+main aside {
+  padding: 1rem;
+  font-size: 0.8rem;
+  width: 30%;
+  float: right;
+}
+
+/* Lists */
+
+main ul { margin: 0 1rem 1.25rem; }
+
+main ul li {
+  list-style: none;
+  margin: 0.5rem 0;
+}
+
+/* Forms */
+
+main label { font-weight: bold; }
+
+main button,
+main input {
+  display: block;
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
+
+main input[type="date"],
+main input[type="datetime"],
+main input[type="datetime-local"],
+main input[type="email"],
+main input[type="month"],
+main input[type="number"],
+main input[type="password"],
+main input[type="search"],
+main input[type="tel"],
+main input[type="text"],
+main input[type="time"],
+main input[type="week"] {
+  padding: 0 0.5rem;
+}
+
+main input[type="checkbox"],
+main input[type="radio"],
+main input[type="range"] {
+  display: inline;
+  width: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+main textarea {
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+main button,
+main input[type="submit"] {
+  margin: 0.5rem auto;
+  width: 12rem;
+}
+
+
+/* Tables */
+
+main table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+  border: 2px solid;
+}
+
+main th,
+main td {
+  padding: 0.25rem 0;
+  text-align: center;
+  border: 1px solid;
+}
+
+
+/* FOOTER STYLES *************************************************************/
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
