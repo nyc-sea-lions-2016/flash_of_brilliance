@@ -4,6 +4,14 @@
 
 
 <section>
-
+  <% @games.reverse.each do |game| %>
+  <p> Deck Name: <%= game.deck.name %> </p>
+  <br>
+  <p> Num Correct: <%= game.num_correct %> </p>
+  <p> Num Incorrect: <%= game.num_incorrect %> </p>
+  <p> Num Correct on First-Try: <%= game.first_try_count %> </p>
+  <p> Total Guesses: <%= game.total_guesses %> </p>
+  <br>
+  <% end %>
 </section>
 
