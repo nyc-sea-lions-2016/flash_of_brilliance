@@ -1,16 +1,16 @@
-get '/deck' do
+get '/decks' do
 	@decks = Deck.all
-	
-	erb :deck
+
+	erb :'decks/index'
 end
 
 get '/user/:id' do
-	redirect 'users/:id'
+	@user = User.find(params[:id])
+  erb :'users/:id'
 end
 
-get '/deck/:id' do
-
-	erb :'/game'
+get '/decks/:id' do
+	redirect '/games/show'
 end
 
 

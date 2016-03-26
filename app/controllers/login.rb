@@ -1,5 +1,5 @@
-get '/login' do
-  erb :login
+get '/sessions/login' do
+  erb :'sessions/login'
 end
 
 post '/login' do
@@ -30,7 +30,7 @@ end
 
 get '/logout' do
   session.clear
-  redirect '/login'
+  redirect '/sessions/login'
 end
 
 

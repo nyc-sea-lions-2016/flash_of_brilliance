@@ -1,15 +1,15 @@
-    <h1>Welcome to Flashcards!</h1>
-    <h3>Login here</h3>
-      <form method="post" action="/login">
-      <div>
-        <label for="user_name"></label>
-        <input id="user_name_input" placeholder="user_name" name="user[user_name]" type="text" value="<%= @user.try(:user_name) %>">
-      </div>
-      <div>
-        <label for="password"></label>
-        <input id="password_input" placeholder="password" name="user[password]" type="password" value="<%= @user.try(:password) %>">
-      </div>
+<h1>Welcome to Flashcards!</h1>
+<h3>Login here</h3>
+  <form method="post" action="/login">
+  <div>
+    <label for="user_name"></label>
+    <input id="user_name_input" placeholder="user_name" name="user[user_name]" type="text" value="<%= @user.try(:user_name) %>">
+  </div>
+  <div>
+    <label for="password"></label>
+    <input id="password_input" placeholder="password" name="user[password]" type="password" value="<%= @user.try(:password) %>">
+  </div>
 
-      <input type="submit" value="Sign-In" class="button">
-    </form>
-      
+  <input type="submit" value="Sign-In" class="button">
+</form>
+

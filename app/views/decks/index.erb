@@ -1,6 +1,6 @@
 
 
-      
+
 
     <h1>Choose your Deck</h1>
 
@@ -8,13 +8,11 @@
 
         <ul>
           <% @decks.each do |deck| %>
-            <li><a href='/deck/<%= deck.id %>'>
+            <li><a href='/games/<%= deck.id %>'>
               <h3><%=  deck.name.capitalize %></h3></li></a>
-              <form type='hidden' name='deck_id' value='<%= deck.id %>'>
-              </form>
             <p><%= deck.description %></p>
           <% end %>
         </ul>
 
 
- 
+
