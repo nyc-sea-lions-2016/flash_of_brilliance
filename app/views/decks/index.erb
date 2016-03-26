@@ -8,8 +8,11 @@
 
         <ul>
           <% @decks.each do |deck| %>
-            <li><a href='/games/<%= deck.id %>'>
-              <h3><%=  deck.name.capitalize %></h3></li></a>
+            <li><form method='post' action='/games'>
+            <input type='submit' value='<%= deck.name.capitalize%>'>
+            <input type='hidden' name='deck_id' value='<%= deck.id %>'>
+              </li>
+            </form>
             <p><%= deck.description %></p>
           <% end %>
         </ul>
