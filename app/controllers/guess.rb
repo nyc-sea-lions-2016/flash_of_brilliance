@@ -1,27 +1,21 @@
-# post '/games/:id/guesses' do
-#   @user = User.find(session[:user_id])
-#   @deck = Deck.find(params[:id])
-#   idx = session[:indexes].first
-#   if !session[:indexes].empty?
-#     @card = Card.find(idx)
-#     @game = Game.find(session[:game_id])
-#     @guess = Guess.create(card_id: @card.id, game_id: session[:game_id])
-#       if @card.answer == params[:answer]
-#         session[:indexes].shift
+ post '/games/:id/guesses' do
+  @user = User.find(session[:user_id])
+  @game = Game.find(params[:id])
+  idx = session[:indexes].first
+  @card = Card.find(idx)
+  @guess = Guess.create(card_id: @card.id, game_id: @game.id)
+  if @card.answer == params[:answer]
+    session[:indexes].shift
+  else
+    #guess counter stuff
+  end
+  if session[:indexes].empty?
+    redirect "/users/#{@user.id}"
+  else
+    redirect "/games/#{@game.id}"
+  end
 
-
-#         erb :"games/show"
-#       else
-
-
-#         erb :"games/show"
-#       end
-
-#   else
-#     redirect "/users/#{session[:user_id]}"
-#   end
-
-# end
+ end
 
     # @game.increment!(:total_guesses)
 

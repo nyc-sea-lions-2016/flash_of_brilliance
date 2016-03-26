@@ -1,11 +1,7 @@
 <section>
   <article>
-    <% if @card %>
     <p><%= @card.question %></p>
-    <% else %>
-    <p> Type answer and click to continue </p>
-    <% end %>
-    <form method="POST" action="/games/<%= @deck.id %>">
+    <form method="POST" action="/games/<%= @game.id %>/guesses">
       <input type="text" placeholder="input your answer here" name="answer">
       <input type="submit" value="Submit Answer">
     </form>
