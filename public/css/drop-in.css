@@ -111,6 +111,12 @@ header h1 {
   font-size: 3rem;
 }
 
+header a {
+  float: right;
+  font-style: italic;
+  margin-bottom: 2;
+}
+
 header p {
   font-style: italic;
   margin-bottom: 0;

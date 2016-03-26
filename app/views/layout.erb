@@ -22,6 +22,13 @@
   <body>
     <header>
       <h1>Flashcards!!!!!!</h1>
+      <% if logged_in? %>
+        <a href='/users/show'><%= current_user.user_name %></a>
+        <br>
+        <a href='/logout'>Logout</a>
+        
+
+      <% end %>
     </header>
     <main>
       <%= yield %>
