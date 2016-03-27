@@ -1,0 +1,13 @@
+<section>
+  <article>
+    <p><%= @card.question %></p>
+    <form method="POST" action="/games/<%= @game.id %>/guesses">
+      <input type="text" placeholder="input your answer here" name="answer">
+      <input type="submit" value="Submit Answer">
+    </form>
+  </article>
+
+  <aside>
+
+  </aside>
+</section>

@@ -2,6 +2,7 @@ user_count = 10
 card1 = 20
 card2 = 20
 card3 = 20
+card4 = 3
 decks = 3
 
 
@@ -37,9 +38,23 @@ user_count.times do
       )
   end
 
+  card4.times do
+    Card.create(
+      question: Faker::StarWars.quote,
+      answer: "answer",
+      deck_id: 4
+
+      )
+  end
+
   decks.times do
     Deck.create(
       name: Faker::Color.color_name,
       description:  Faker::Hipster.sentence
       )
   end
+
+  Deck.create(
+    name: 'Test Deck',
+    description: "Testing shit since 2016")
+
